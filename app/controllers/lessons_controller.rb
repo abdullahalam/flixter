@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
 
   def require_authorized_for_current_section
     if current_user.enrolled_in?(current_lesson.section.course)
-      
+      redirect_to course_path(current_lesson.section.course), alert: 'Error Message Here'
     end
   end
 
