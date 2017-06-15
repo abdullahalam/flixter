@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Flixter</title>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="author" content="Abdullah Alam">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,30 +20,31 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <%= link_to image_tag("logo.png", alt: "Flixter Logo"), '/', class: 'navbar-brand hidden-xs-down hidden-sm-down hidden-md-down' %>
         <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-md-0">
             <li class="nav-item">
-              <%= link_to 'See All Courses', courses_path %>
+              <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
             </li>
           </ul>
 
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to 'My Dashboard', dashboard_path %>
+                <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
               </li>
 
               <li class="nav-item">
-                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
             <% else %>
               <li class="nav-item">
-                <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+                <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
               </li>
               <li class="nav-item">
-                <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+                <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
               </li>
             <% end %>
           </ul>
@@ -47,10 +53,10 @@
       </nav>
 
       <% if notice.present? %>
-        <p class="alert alert-info"><%= notice %></p>
+        <p class="alert alert-info successful"><%= notice %></p>
       <% end %>
       <% if alert.present? %>
-        <p class="alert alert-danger"><%= alert %></p>
+        <p class="alert alert-danger unsuccessful"><%= alert %></p>
       <% end %>
 
       <%= yield %>
@@ -78,21 +84,30 @@
           <div class="col-12 col-sm-3">
             <b>Contact</b>
             <br />
-            ken@thefirehoseproject.com
+            abdullah.alam.omi@gmail.com
             <br />
-            One Kendall Square
-            <br />
-            Cambridge MA, 02113
+            Buena Park, CA 90620
           </div>
           <div class="col-12 col-sm-3 social">
             <b>Social</b>
             <br />
-            <br />
-            <%= link_to 'http://github.com/kenmazaika' do %>
-              <span class="fa fa-github-square fa-2x social-button"></span>
+            <%= link_to 'https://github.com/abdullahalam' do %>
+              <span class="fa fa-github-alt fa-2x social-button"></span>
             <% end %>
-            <span class="fa fa-facebook-square fa-2x social-button"></span>
-            <span class="fa fa-twitter-square fa-2x social-button"></span>
+            <%= link_to 'https://www.facebook.com/boom.boom.omi' do %>
+              <span class="fa fa-facebook-official fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://twitter.com/abdullah_a_alam' do %>
+              <span class="fa fa-twitter fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://www.linkedin.com/in/abdullahaalam' do %>
+              <span class="fa fa-linkedin fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://medium.com/@abdullahaalam' do %>
+              <span class="fa fa-medium fa-2x social-button"></span>
+            <% end %>
+
+
           </div>
         </div>
       </div>
