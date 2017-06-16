@@ -11,7 +11,7 @@
 .navbar-inverse a.navbar-brand {
   font-family: Chalkduster, fantasy; 
   font-weight: 100;
-  color: white;
+  color: #428bca;
   font-size:26px;
 }
 
@@ -30,18 +30,18 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .frosty {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
 .frosty h1 {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: Chalkduster, fantasy; 
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
@@ -164,4 +164,10 @@ ul .header .fa {
 .header-text {
   font-family: Chalkduster, fantasy; 
   font-size: 25px; 
+}
+
+.image-center {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
