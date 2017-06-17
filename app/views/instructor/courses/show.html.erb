@@ -38,8 +38,10 @@
   <br /><br />
   <%= image_tag current_course.image, class: 'img-fluid image-center hidden-xs-down hidden-sm-down hidden-md-down' %>
   <br />
-  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
+  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning text-center' %>
   <br class="clr" />
+  <br />
+  <br />
 
   <div class="text-center">
     <!-- Button trigger modal -->
@@ -72,7 +74,7 @@
                   <br />
                   <span class="fa fa-ellipsis-v"></span>
                 </div>
-                <div class="col-11 text-center">
+                <div class="col-11 text-center col-sm-5">
                   <p>
                     <b><%= lesson.title %></b>
                   </p>
