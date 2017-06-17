@@ -1,24 +1,78 @@
-# README
+# Flixter Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Flixter](http://flixter-abdullah-alam.herokuapp.com): A two sided video streaming marketplace, featuring credit card payment capabilities, user role management, advanced UI & UX, and advanced database relationships.
 
-Things you may want to cover:
+This app powers Flixter located [here](http://flixter-abdullah-alam.herokuapp.com)
 
-* Ruby version
 
-* System dependencies
+## Getting Started
 
-* Configuration
+## Software requirements
 
-* Database creation
+- Rails 5.0.0 or higher
 
-* Database initialization
+- Ruby 2.3.1 or higher
 
-* How to run the test suite
+- PostgreSQL 9.5.x or higher
 
-* Services (job queues, cache servers, search engines, etc.)
+## Navigate to the Rails application
 
-* Deployment instructions
+```
+$ cd /path/to/rails/application
+```
 
-* ...
+## Set configuration files
+
+```
+$ cp config/database.yml.template config/database.yml
+$ cp config/application.yml.template config/application.yml
+$ cp config/initializers/carrierwave.rb.template config/initializers/carrierwave.rb
+$ cp config/initializers/stripe.rb.template config/initializers/stripe.rb
+```
+
+Note:  You may need to edit the above files as necessary for your system.
+
+## Create the database
+
+ ```
+ $ pgstart
+ $ rake db:create
+ ```
+
+## Migrating and seeding the database
+
+```
+$ rake db:migrate
+$ rake db:seed
+```
+
+## Starting the local server
+
+```
+$ rails server
+
+   or
+
+$ rails s
+```
+
+## Production Deployment
+
+  ```
+  $ git push heroku master
+  $ heroku run rake db:migrate
+  ```
+
+## Support
+
+Bug reports and feature requests can be filed with the rest for the Ruby on Rails project here:
+
+* [File Bug Reports and Features](https://github.com/abdullahalam/flixter/issues)
+
+## License
+
+Flixter is released under the [MIT license](https://mit-license.org).
+
+## Copyright
+
+&copy; Copyright 2017 Abdullah Alam. All Rights Reserved.
