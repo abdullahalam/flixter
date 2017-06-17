@@ -41,7 +41,6 @@
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning text-center' %>
   <br class="clr" />
   <br />
-  <br />
 
   <div class="text-center">
     <!-- Button trigger modal -->
@@ -66,7 +65,7 @@
         <br class="clr" />
         <br class="clr" />
 
-        <ul class="lessons">
+        <ul class="lessons hidden-xs-down hidden-sm-down hidden-md-down">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path(lesson) %>">
               <div class="row">
@@ -74,7 +73,7 @@
                   <br />
                   <span class="fa fa-ellipsis-v"></span>
                 </div>
-                <div class="col-11 text-center col-sm-5">
+                <div class="col-11 text-center">
                   <p>
                     <b><%= lesson.title %></b>
                   </p>
