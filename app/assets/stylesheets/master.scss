@@ -199,6 +199,10 @@ ul .header .fa {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
 
+  .more-info {
+    visibility: hidden; 
+  }
+
 }
 
 /* Landscape */
@@ -218,6 +222,10 @@ ul .header .fa {
 
   .more-info {
     visibility: hidden; 
+  }
+
+  .course-description {
+    text-align: center; 
   }
 
 }
