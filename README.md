@@ -4,6 +4,10 @@
 
 This app powers Flixter located [here](http://flixter-abdullah-alam.herokuapp.com)
 
+## Wireframe
+
+This wireframe powers Flixter Web App located [here](https://www.dropbox.com/s/4rfccmatgc91thp/flixter-wireframe.pdf?dl=0)
+
 
 ## Getting Started
 
